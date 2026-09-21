@@ -7,7 +7,11 @@ authors = [
     { name = "Garam Lee", email = "agerio100@naver.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "polars>=1.44.2",
+    "python-dotenv>=1.2.3",
+    "typesafe-sdk>=0.7.0",
+]
 
 [project.scripts]
 sqlitriager = "sqlitriager:main"
@@ -15,3 +19,9 @@ sqlitriager = "sqlitriager:main"
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
